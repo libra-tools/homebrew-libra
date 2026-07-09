@@ -11,3 +11,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Test formula updater
         run: bash test/update-formula-test.sh
+
+  formula:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tap local repository
+        run: brew tap libra-tools/libra "$GITHUB_WORKSPACE"
+      - name: Install formula
+        run: brew install libra-tools/libra/libra
+      - name: Verify binary
+        run: libra --version
