@@ -1,21 +1,21 @@
 class Libra < Formula
   desc "AI agent-native version control system with Git on-disk compatibility"
   homepage "https://github.com/libra-tools/libra"
-  version "0.30.26"
+  version "0.30.27"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://download.libra.tools/libra/releases/v0.30.26/libra-darwin-arm64",
+    url "https://download.libra.tools/libra/releases/v0.30.27/libra-darwin-arm64",
         using: :nounzip
-    sha256 "b492d9f769f7a273d16ba00b66f252165b6a0af4328f31aac981c1f7be10b780"
+    sha256 "27bdd46aca791015a917e71588b2f2ded2ec91f7aa61be19b6e326158c3b46f0"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://download.libra.tools/libra/releases/v0.30.26/libra-linux-amd64",
+    url "https://download.libra.tools/libra/releases/v0.30.27/libra-linux-amd64",
         using: :nounzip
-    sha256 "8f64ce320e570b24049f13452e39c87bf9af3c406234098eb184800f5772b584"
+    sha256 "7ea834de8e226eb752c147034755d5ce82b642d9bb3d6544752a858701fd3a4c"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://download.libra.tools/libra/releases/v0.30.26/libra-linux-arm64",
+    url "https://download.libra.tools/libra/releases/v0.30.27/libra-linux-arm64",
         using: :nounzip
-    sha256 "19efdbc6ebac90f9638f9772aa3794d76b03923eac0ec1109fd205922c62a2b1"
+    sha256 "855cd1a69cc6aea2ac26a806d4597a295437ccb5db2e21507bbe952842db9285"
   else
     odie "Libra does not publish a Homebrew binary for this platform yet."
   end
